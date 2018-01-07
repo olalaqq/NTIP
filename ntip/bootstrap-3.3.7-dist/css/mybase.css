@@ -1,0 +1,58 @@
+.header-back {
+  background: #2aabd2;
+  color: #ffffff;
+  margin: 0px;
+  height: 75px;
+}
+.header-back h1 {
+  margin-top: 0px;
+  margin-left: 30px;
+  line-height: 75px;
+  font-size: 20px;
+}
+.search-box {
+  margin-top: 10px;
+  width: 100%;
+}
+.search-box .line {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-box .line .line-left-1 {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  flex-shrink: 0;
+}
+.search-box .line ul {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  line-height: 30px;
+}
+.search-box .line .line-con {
+  margin-left: 5px;
+  flex-wrap: nowrap;
+  display: flex;
+}
+.search-box .line .line-con .fucking-state {
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  line-height: 42px;
+}
+.search-box .line .line-con .dropdown {
+  flex-grow: 1;
+  margin-left: 5px;
+  line-height: 42px;
+}
+.search-box .line .btn-com {
+  width: 100px;
+  margin-left: 5px;
+  background: #2aabd2;
+  color: #ffffff;
+}
+.result-box {
+  padding: 30px;
+  width: 100%;
+}

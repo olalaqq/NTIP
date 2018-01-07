@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>机房监控运维平台</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/mybase.css" rel="stylesheet">
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="page-header header-back">
+    <h1>机房监控运维平台</h1>
+</div>
+<div class="search-box">
+    <div class="line">
+        <div class="line-left-1">设备类型：</div>
+        <ul class="nav nav-pills">
+            <li role="presentation" onclick="selected(this)"><a>UPS</a></li>
+            <li role="presentation" onclick="selected(this)"><a>空调</a></li>
+            <li role="presentation" onclick="selected(this)"><a>温湿度</a></li>
+            <li role="presentation" onclick="selected(this)"><a>水浸</a></li>
+            <li role="presentation" onclick="selected(this)"><a>蓄电池</a></li>
+            <li role="presentation" onclick="selected(this)"><a>配电表</a></li>
+        </ul>
+    </div>
+    <div class="line">
+        <div class="line-left-1">地区：</div>
+        <ul class="nav nav-pills">
+            <li role="presentation" onclick="selected(this)"><a>省信通</a></li>
+            <li role="presentation" onclick="selected(this)"><a>南京</a></li>
+            <li role="presentation" onclick="selected(this)"><a>苏州</a></li>
+            <li role="presentation" onclick="selected(this)"><a>常州</a></li>
+            <li id="5" role="presentation" onclick="selected(this)"><a>无锡</a></li>
+            <li role="presentation" onclick="selected(this)"><a>淮安</a></li>
+            <li role="presentation" onclick="selected(this)"><a>宿迁</a></li>
+            <li role="presentation" onclick="selected(this)"><a>徐州</a></li>
+            <li role="presentation" onclick="selected(this)"><a>扬州</a></li>
+            <li role="presentation" onclick="selected(this)"><a>泰州</a></li>
+            <li role="presentation" onclick="selected(this)"><a>南通</a></li>
+            <li role="presentation" onclick="selected(this)"><a>连云港</a></li>
+            <li role="presentation" onclick="selected(this)"><a>镇江</a></li>
+            <li role="presentation" onclick="selected(this)"><a>盐城</a></li>
+        </ul>
+    </div>
+    <div class="line">
+        <div class="line-con">
+            <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
+                <span class="input-group-addon" id="basic-addon2">最后通讯时间：</span>
+                <input type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="line-con">
+            <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
+                <span class="input-group-addon" id="basic-addon1">通讯IP：</span>
+                <input type="text" class="form-control" placeholder="IP" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="line-con"style="flex-shrink: 0">
+            <div class="con-title fucking-state">运行状态:</div>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    运行
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">停用</a></li>
+                    <li><a href="#">运行</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line-con" style="width: 200px">
+            <button class="btn btn-default btn-com">导出</button>
+            <button id="com-search" type="button" onclick="loadXMLDoc()" class="btn btn-default btn-com">查询</button>
+        </div>
+    </div>
+</div>
+<div class="result-box table-responsive">
+    <table class="table table-hover table-bordered table-li">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>设备类型</th>
+                <th>地市公司</th>
+                <th>所在机房</th>
+                <th>设备名称</th>
+                <th>最后通讯时间</th>
+                <th>告警等级</th>
+                <th>设备型号</th>
+                <th>通讯IP</th>
+                <th>运行状态</th>
+                <th>数据</th>
+            </tr>
+        </thead>
+        <tbody id="tbMain"></tbody>
+    </table>
+    <nav aria-label="Page navigation"style="position: fixed;bottom: 20px;align-content: center">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+<script type="text/javascript" src="bootstrap-3.3.7-dist/js/seacrh.js">
+</script>
+</html>

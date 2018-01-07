@@ -1,0 +1,74 @@
+[
+  {
+    "id":"1",
+    "shebeilei":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeileixing":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  },
+  {
+    "id":"2",
+    "shebeilei":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeileixing":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  },
+  {
+    "id":"3",
+    "shebeilei":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeileixing":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  },
+  {
+    "id":"4",
+    "shebeileixing":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeilei":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  },
+  {
+    "id":"5",
+    "shebeilei":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeileixing":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  },
+  {
+    "id":"6",
+    "shebeilei":"温湿度",
+    "dishigongsi":"淮安",
+    "suozaijifang":"9楼UPS间",
+    "shebeimincheng":"温湿度",
+    "zuihoutongxunshijian":"2018.1.2 18:30",
+    "gaojingdengji":"严重",
+    "shebeileixing":"diji2",
+    "IP":"192.168.1.1",
+    "yunxingzhuangtai":"1"
+  }
+]
