@@ -46,8 +46,30 @@
   margin-left: 5px;
   line-height: 42px;
 }
-.search-box .line .btn-com {
-  width: 100px;
+.search-box .check-line {
+  width: 100%;
+  display: inline-block;
+}
+.search-box .check-line .line-l-1 {
+  vertical-align: top;
+  display: inline-block;
+}
+.search-box .check-line .line-l-1 .fucking-state {
+  margin-top: 4px;
+  display: inline-block;
+}
+.search-box .check-line .line-l-1 .dropdown {
+  margin-top: 4px;
+  display: inline-block;
+}
+.search-box .check-line .line-r-1 {
+  display: inline-block;
+  text-align: right;
+}
+.search-box .check-line .line-r-1 .btn-com {
+  display: inline-block;
+  width: 90px;
+  margin-top: 4px;
   margin-left: 5px;
   background: #2aabd2;
   color: #ffffff;
