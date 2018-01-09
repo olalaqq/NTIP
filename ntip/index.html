@@ -7,10 +7,12 @@
     <title>机房监控运维平台</title>
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap-3.3.7-dist/css/mybase.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap-datetimepicker.css" rel="stylesheet">
     <script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.zh-CN.js"></script>
 </head>
-<body>
 <div class="page-header header-back">
     <h1>机房监控运维平台</h1>
 </div>
@@ -49,7 +51,7 @@
         <div class="line-l-1">
             <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
                 <span class="input-group-addon" id="basic-addon2">最后通讯时间：</span>
-                <input type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1">
+                <input id="datetimepicker" type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1">
             </div>
         </div>
         <div class="line-l-1">
@@ -116,6 +118,13 @@
         </ul>
     </nav>
 </div>
+<script type="text/javascript">
+    $('#datetimepicker').datetimepicker({
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        todayBtn:1
+    });
+</script>
 </body>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/seacrh.js">
 </script>

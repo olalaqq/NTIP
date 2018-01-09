@@ -2,7 +2,6 @@ function selected(obj){
     $(obj).toggleClass('active');
 }
 function loadXMLDoc() {
-    var array={};
     $.ajax({
         type:"post",
         url:"bootstrap-3.3.7-dist/js/item.json",
