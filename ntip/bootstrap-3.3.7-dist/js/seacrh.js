@@ -9,11 +9,30 @@ function loadXMLDoc() {
         success:function (result) {
             addBox(result)
         }
-    })
+    });
+    var options = {
+        currentPage: 4,
+        totalPages: 10,
+        numberOfPages:5,
+        itemTexts: function(type, page, current) { //修改显示文字
+            switch (type) {
+                case "first":
+                    return "第一页";
+                case "prev":
+                    return "上一页";
+                case "next":
+                    return "下一页";
+                case "last":
+                    return "最后一页";
+                case "page":
+                    return page;
+            }
+        }
+    };
+    $('#page-pgone').bootstrapPaginator(options);
 }
 function addBox(per) {
     var tbody = $('#tbMain');
-    tbody.empty();
     for(var i = 0;i < per.length; i++){ //遍历一下json数据
         var trow = getDataRow(per[i]); //定义一个方法,返回tr数据
         tbody.append(trow);
