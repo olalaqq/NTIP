@@ -13,13 +13,14 @@
     <script src="bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.zh-CN.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap-paginator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <div class="page-header header-back">
     <h1>机房监控运维平台</h1>
 </div>
 <div class="search-box">
     <div class="line">
-        <div class="line-left-1">设备类型：</div>
+        <div id="catName" class="line-left-1">设备类型：</div>
         <ul class="nav nav-pills">
             <li role="presentation" onclick="selected(this)"><a>UPS</a></li>
             <li role="presentation" onclick="selected(this)"><a>空调</a></li>
@@ -30,13 +31,13 @@
         </ul>
     </div>
     <div class="line">
-        <div class="line-left-1">地区：</div>
+        <div id="areaName" class="line-left-1">地区：</div>
         <ul class="nav nav-pills">
             <li role="presentation" onclick="selected(this)"><a>省信通</a></li>
             <li role="presentation" onclick="selected(this)"><a>南京</a></li>
             <li role="presentation" onclick="selected(this)"><a>苏州</a></li>
             <li role="presentation" onclick="selected(this)"><a>常州</a></li>
-            <li id="5" role="presentation" onclick="selected(this)"><a>无锡</a></li>
+            <li role="presentation" onclick="selected(this)"><a>无锡</a></li>
             <li role="presentation" onclick="selected(this)"><a>淮安</a></li>
             <li role="presentation" onclick="selected(this)"><a>宿迁</a></li>
             <li role="presentation" onclick="selected(this)"><a>徐州</a></li>

@@ -2,9 +2,18 @@ function selected(obj){
     $(obj).toggleClass('active');
 }
 function loadXMLDoc() {
+    var areaName=[];
+    a = $("areaName").children(".active").text()
+    alert(a);
+    var catName=[];
+    var lastTime;
+    var ipAddress;
+    var status;
+    var alarm;
     $.ajax({
         type:"post",
         url:"bootstrap-3.3.7-dist/js/item.json",
+        data:"hi",
         dataType:'json',
         success:function (result) {
             addBox(result)
@@ -33,6 +42,7 @@ function loadXMLDoc() {
 }
 function addBox(per) {
     var tbody = $('#tbMain');
+    tbody.empty();
     for(var i = 0;i < per.length; i++){ //遍历一下json数据
         var trow = getDataRow(per[i]); //定义一个方法,返回tr数据
         tbody.append(trow);
@@ -48,12 +58,8 @@ function getDataRow(h){
     row.appendChild(nameCell);
     var delCell = document.createElement('td');//创建第四列，操作列
     row.appendChild(delCell);
-    var btnDel = document.createElement('input'); //创建一个input控件
-    btnDel.setAttribute('type',''); //type="button"
+    var btnDel = document.createElement('button'); //创建一个input控件
     btnDel.setAttribute('value','详情');
+    row.appendChild(btnDel);
     return row; //返回tr数据
-}
-function getArray(){
-    var array={};
-
 }
