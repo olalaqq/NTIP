@@ -2,14 +2,15 @@ function selected(obj){
     $(obj).toggleClass('active');
 }
 function loadXMLDoc() {
-    var areaName=[];
-    a = $("areaName").children(".active").text()
-    alert(a);
-    var catName=[];
-    var lastTime;
-    var ipAddress;
+    var Orgname=[];
+    $("#areaName").children(".active").each(function(){
+        Orgname=$(this).text()
+    });
+
+    var Catname=[];
+    var alarmTime=[];
+    var serviceIp;
     var status;
-    var alarm;
     $.ajax({
         type:"post",
         url:"bootstrap-3.3.7-dist/js/item.json",
@@ -50,16 +51,56 @@ function addBox(per) {
 }
 function getDataRow(h){
     var row = document.createElement('tr'); //创建行
-    var idCell = document.createElement('td'); //创建第一列id
+
+    var idCell = document.createElement('td'); //创建第一列序号
     idCell.innerHTML = h.id; //填充数据
     row.append(idCell); //加入行  ，下面类似
-    var nameCell = document.createElement('td');//创建第二列name
-    nameCell.innerHTML = h.shebeilei;
-    row.appendChild(nameCell);
-    var delCell = document.createElement('td');//创建第四列，操作列
-    row.appendChild(delCell);
-    var btnDel = document.createElement('button'); //创建一个input控件
-    btnDel.setAttribute('value','详情');
-    row.appendChild(btnDel);
+
+    var catName = document.createElement('td');//创建第二列设备类型catname
+    catName.innerHTML = h.catname;
+    row.appendChild(catName);
+
+    var orgname = document.createElement('td');//创建第三列地市公司org_name
+    orgname.innerHTML = h.org_name;
+    row.appendChild(catName);
+
+    var roomName = document.createElement('td');//创建第四列所在机房roomName
+    roomName.innerHTML = h.roomName;
+    row.appendChild(roomName);
+
+    var deviceName = document.createElement('td');//创建第五列设备名称deviceName
+    deviceName.innerHTML = h.deviceName;
+    row.appendChild(deviceName);
+
+    var lasttime = document.createElement('td');//创建第6列最后通讯时间lasttime
+    lasttime.innerHTML = h.lasttime;
+    row.appendChild(lasttime);
+
+    var alarmLevel = document.createElement('td');//创建第7列告警等级alarmLevel
+    alarmLevel.innerHTML = h.alarmLevel;
+    row.appendChild(alarmLevel);
+
+    var alarmLevel = document.createElement('td');//创建第8列告警等级alarmLevel
+    alarmLevel.innerHTML = h.alarmLevel;
+    row.appendChild(alarmLevel);
+
+    var typename = document.createElement('td');//创建第9列设备型号typename
+    typename.innerHTML = h.typename;
+    row.appendChild(typename);
+
+    var serviceIp = document.createElement('td');//创建第10列设备IP serviceIp
+    serviceIp.innerHTML = h.serviceIp;
+    row.appendChild(serviceIp);
+
+    var state = document.createElement('td');//创建第11列运行状态
+    state.innerHTML = h.state;
+    row.appendChild(state);
+
+    var detail = document.createElement('td');//创建详情列
+    var detailBtn = document.createElement('a'); //创建一个input控件
+    detailBtn.innerHTML="详情"
+    detail.appendChild(detailBtn);
+    row.appendChild(detail);
+
     return row; //返回tr数据
 }
