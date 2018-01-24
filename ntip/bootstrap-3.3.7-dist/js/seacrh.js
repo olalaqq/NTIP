@@ -1,15 +1,30 @@
 function selected(obj){
     $(obj).toggleClass('active');
 }
+function isdeviceIp(ipAdress){
+    var parden="^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
+        +"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+        +"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
+        +"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
+    return  parden.test(ipAdress)
+}
+
 function loadXMLDoc() {
     var Orgname=[];
     $("#areaName").children(".active").each(function(){
-        Orgname=$(this).text()
+        Orgname.push($(this).text());
     });
-
+    alert(Orgname);
     var Catname=[];
-    var alarmTime=[];
-    var serviceIp;
+    $("#catName").children(".active").each(function(){
+        Catname.push($(this).text());
+    });
+    alert(Catname);
+    var alarmTime=$("#datetimepicker").val();
+    alert(alarmTime);
+
+    var serviceIp=$("#serviceIp").val();
+    alert(serviceIp);
     var status;
     $.ajax({
         type:"post",

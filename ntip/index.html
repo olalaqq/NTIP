@@ -20,8 +20,8 @@
 </div>
 <div class="search-box">
     <div class="line">
-        <div id="catName" class="line-left-1">设备类型：</div>
-        <ul class="nav nav-pills">
+        <div class="line-left-1">设备类型：</div>
+        <ul id="catName" class="nav nav-pills">
             <li role="presentation" onclick="selected(this)"><a>UPS</a></li>
             <li role="presentation" onclick="selected(this)"><a>空调</a></li>
             <li role="presentation" onclick="selected(this)"><a>温湿度</a></li>
@@ -53,13 +53,13 @@
         <div class="line-l-1">
             <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
                 <span class="input-group-addon" id="basic-addon2">最后通讯时间：</span>
-                <input id="datetimepicker" type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1">
+                <input id="datetimepicker" type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1" data-date-format="dd-mm-yyyy">
             </div>
         </div>
         <div class="line-l-1">
             <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
                 <span class="input-group-addon" id="basic-addon1">通讯IP：</span>
-                <input type="text" class="form-control" placeholder="IP" aria-describedby="basic-addon1">
+                <input id="serviceIp" type="text" class="form-control" placeholder="IP" aria-describedby="basic-addon1">
             </div>
         </div>
         <div class="line-l-1">
@@ -107,7 +107,7 @@
 <script type="text/javascript">
     $('#datetimepicker').datetimepicker({
         language:  'zh-CN',
-        format: 'yyyy-mm-dd hh:ii',
+        format: 'yyyy-mm-dd',
         todayBtn:1
     });
 </script>
