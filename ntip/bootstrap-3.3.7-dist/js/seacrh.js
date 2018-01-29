@@ -1,6 +1,16 @@
 function selected(obj){
     $(obj).toggleClass('active');
 }
+function setStatus(obj){
+    switch ($(obj).text()){
+        case "停用":
+            $("#dropdownMenu1").text("停用");
+        case "运行":
+            $("#dropdownMenu1").text("运行");
+        case "故障":
+            $("#dropdownMenu1").text("故障");
+    }
+}
 function isdeviceIp(ipAdress){
     var parden="^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
         +"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
@@ -8,7 +18,6 @@ function isdeviceIp(ipAdress){
         +"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
     return  parden.test(ipAdress)
 }
-
 function loadXMLDoc() {
     var Orgname=[];
     $("#areaName").children(".active").each(function(){
@@ -24,8 +33,14 @@ function loadXMLDoc() {
     alert(alarmTime);
 
     var serviceIp=$("#serviceIp").val();
-    alert(serviceIp);
-    var status;
+    alert(serviceIp)
+    if(isdeviceIp(serviceIp)){
+        alert(serviceIp);
+    }
+    else {
+        alert('错误的IP地址');
+    }
+
     $.ajax({
         type:"post",
         url:"bootstrap-3.3.7-dist/js/item.json",

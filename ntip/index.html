@@ -53,7 +53,7 @@
         <div class="line-l-1">
             <div class="input-group"style="width: 300px;margin-top: 4px;margin-bottom: 4px">
                 <span class="input-group-addon" id="basic-addon2">最后通讯时间：</span>
-                <input id="datetimepicker" type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1" data-date-format="dd-mm-yyyy">
+                <input id="datetimepicker" type="text" class="form-control" placeholder="最后通讯时间" aria-describedby="basic-addon1" data-date-format="yyyy-mm-dd">
             </div>
         </div>
         <div class="line-l-1">
@@ -70,8 +70,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">停用</a></li>
-                    <li><a href="#">运行</a></li>
+                    <li><a onclick="setStatus(this)" href="#">停用</a></li>
+                    <li><a onclick="setStatus(this)" href="#">运行</a></li>
+                    <li><a onclick="setStatus(this)" href="#">故障</a></li>
                 </ul>
             </div>
         </div>
@@ -106,12 +107,15 @@
 </div>
 <script type="text/javascript">
     $('#datetimepicker').datetimepicker({
-        language:  'zh-CN',
-        format: 'yyyy-mm-dd',
+        language:'zh-CN',
+        Format: 'yyyy-mm-dd',
+        autoclose:true,
+        startView:2,
+        minView:4,
+        todayHighlight:true,
         todayBtn:1
     });
 </script>
-
 </body>
 <script type="text/javascript" src="bootstrap-3.3.7-dist/js/seacrh.js">
 </script>
